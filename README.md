@@ -1,0 +1,2 @@
+# algobin
+pastebin for algorithms
