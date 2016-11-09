@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from . import views
+
 urlpatterns = [
-	url(r'^core/', include('core.urls')),
+	url(r'^(?P<algorithm_id>[0-9]+)/$', views.detail, name='detail'),
+	url(r'^$', views.paste_algo, name='paste_algo'),
     url(r'^admin/', admin.site.urls),
 ]
